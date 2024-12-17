@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface NavLinksProps {
   className?: string;
@@ -6,11 +6,11 @@ interface NavLinksProps {
 
 export function NavLinks({ className }: NavLinksProps) {
   const links = [
-    { href: '#about', label: 'About' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' },
+    { href: "#about", label: "About" },
+    { href: "#experience", label: "Experience" },
+    { href: "#projects", label: "Projects" },
+    { href: "#skills", label: "Skills" },
+    { href: "#contact", label: "Contact" },
   ];
 
   return (

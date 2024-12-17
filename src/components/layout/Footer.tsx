@@ -1,11 +1,11 @@
-import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const socialLinks = [
-    { href: 'https://github.com', icon: Github },
-    { href: 'https://linkedin.com', icon: Linkedin },
-    { href: 'mailto:example@example.com', icon: Mail },
+    { href: "https://github.com/navyavejalla", icon: Github },
+    { href: "https://linkedin.com/in/navyavejalla", icon: Linkedin },
+    { href: "mailto:navyavejalla@gmail.com", icon: Mail },
   ];
 
   return (
@@ -16,6 +16,8 @@ export function Footer() {
             <a
               key={href}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-500"
             >
               <Icon className="h-6 w-6" />
@@ -23,7 +25,10 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Navya Vejalla. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
