@@ -1,3 +1,13 @@
+/* Tailwind's dark mode setup */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply the dark mode class automatically based on localStorage */
+html {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+html.dark {
+  background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+}
