@@ -5,14 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          light: "#6366F1", // Light mode primary color
-          dark: "#4F46E5", // Dark mode primary color
-        },
-        background: {
-          light: "#FFFFFF", // Light mode background
-          dark: "#1A202C", // Dark mode background
-        },
+        lightBg: "rgb(161, 125, 54)", // Biscuit-like color for light mode
+        darkBg: "rgb(35, 145, 81)", // Neutral dark color for dark mode
       },
     },
   },
