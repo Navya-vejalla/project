@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
 import { ThemeToggle } from "../ThemeToggle";
 import { NavLinks } from "./NavLinks";
+import { MobileMenu } from "./MobileMenu";
 
 interface NavigationProps {
   darkMode: boolean;
@@ -37,15 +38,17 @@ export function Navigation({
             </span>
           </motion.div>
 
+          {/* Desktop Nav Links */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="hidden md:block"
           >
-            <NavLinks className="ml-10 flex items-center space-x-4" />
+            <NavLinks />
           </motion.div>
 
+          {/* Mobile Menu Toggle */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -54,6 +57,7 @@ export function Navigation({
           >
             <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             <button
+              aria-label="Toggle Menu"
               className="md:hidden"
               onClick={() => setMenuOpen(!menuOpen)}
             >
@@ -62,6 +66,9 @@ export function Navigation({
           </motion.div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </motion.nav>
   );
 }
